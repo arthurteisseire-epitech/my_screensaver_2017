@@ -5,32 +5,17 @@
 ** By Arthur Teisseire
 */
 
-#include "pixel.h"
-
 int main(void)
 {
-	sfVideoMode mode = {WIDTH, HEIGHT, 32};
-	sfRenderWindow *window;
-	sfSprite *sprite;
-	framebuffer_t *buffer = framebuffer_create(WIDTH, HEIGHT);
+	game_t *game;
+	entity_t *entities_array[1];
 
-	window = create_window("Faire des lignes", mode);
-	while (sfRenderWindow_isOpen(window))
-	{
-		check_exit(window);
-		/* Clear the screen */
-		sfRenderWindow_clear(window, sfBlack);
-
-		my_put_pixel(buffer, 1, 1, sfRed);
-		my_put_pixel(buffer, 0, 0, sfRed);
-		my_put_square(buffer, 20, 20, 50, 200, sfRed);
-		my_put_square(buffer, 500, 400, 200, 70, sfRed);
-
-		sprite = create_sprite_from_buffer(buffer);
-		sfRenderWindow_drawSprite(window, sprite, NULL);
-		/* Update the window */
-		sfRenderWindow_display(window);
+	init_game(game);
+	init_entities(entities_array);
+	while (sfRenderWindow_isOpen(game)) {
+		event(game);
+		update(entities_array);
+		disp(game, entities_array);
 	}
-	sfRenderWindow_destroy(window);
 	return (0);
 }

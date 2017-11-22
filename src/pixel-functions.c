@@ -18,7 +18,7 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 	return (buffer);
 }
 
-void init(framebuffer_t *buffer)
+void clear_buffer(framebuffer_t *buffer)
 {
 	int size = buffer->height * buffer->width * 4;
 

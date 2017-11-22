@@ -17,25 +17,13 @@ sfSprite *create_sprite_from_buffer(framebuffer_t *buffer)
 	return (sprite);
 }
 
-void check_exit(sfRenderWindow *window)
+void event(Game_t *game)
 {
-	sfEvent event;
-
 	/* Process events */
-	while (sfRenderWindow_pollEvent(window, &event))
+	while (sfRenderWindow_pollEvent(game->window, &game->event))
 	{
 		/* Close window : exit */
-		if (event.type == sfEvtClosed)
-			sfRenderWindow_close(window);
+		if (game->event.type == sfEvtClosed)
+			sfRenderWindow_close(game->window);
 	}
-}
-
-sfRenderWindow *create_window(char *title, sfVideoMode mode)
-{
-	sfRenderWindow *window;
-
-	window = sfRenderWindow_create(mode, title, sfResize | sfClose, NULL);
-	if (!window)
-		exit(84);
-	return (window);
 }
