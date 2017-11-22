@@ -8,20 +8,20 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
-#include <SFML/Graphics.h>
-#include <stdlib.h>
+#include "framebuffer.h"
 
-typedef struct position {
-	float x;
-	float y;
-} position_t;
+typedef struct Obj {
+	sfVector *position;
+	sfVector *size;
+	sfVector *speed;
+	sfTexture *texture;
+	sfSprite *sprite;
+} Obj_t;
 
-typedef struct obj {
-	float speed;
-	position_t pos;
-	sfColor color;
-	sfSprite sprite;
-	sfTexture texture;
-} obj_t;
+typedef struct Game {
+	framebuffer_t *framebuffer;
+	sfEvent *event;
+	sfRenderWindow *window;
+} Game_t;
 
 #endif
