@@ -19,6 +19,7 @@ typedef struct position {
 typedef struct obj {
 	float speed;
 	position_t pos;
+	sfColor color;
 	sfSprite sprite;
 	sfTexture texture;
 } obj_t;
