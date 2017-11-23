@@ -20,5 +20,6 @@ sfRenderWindow *create_window()
 	window = sfRenderWindow_create(mode, TITLE, sfResize | sfClose, NULL);
 	if (!window)
 		exit(84);
+	sfRenderWindow_setFramerateLimit(window, 120);
 	return (window);
 }

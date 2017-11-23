@@ -13,9 +13,9 @@ void update(category_t *category, framebuffer_t *buffer)
 
 	for (unsigned int i = 0; i < category->nb_entities; i++) {
 		new_pos = add_vector(category->entities[i]->pos, category->entities[i]->speed);
-		if (new_pos.x > WIDTH || new_pos.x < 0)
+		if (new_pos.x + category->rect.width > WIDTH || new_pos.x < 0)
 			category->entities[i]->speed.x *= -1;
-		if (new_pos.y > HEIGHT || new_pos.y < 0)
+		if (new_pos.y + category->rect.height > HEIGHT || new_pos.y < 0)
 			category->entities[i]->speed.y *= -1;
 		sfSprite_setPosition(category->entities[i]->sprite, new_pos);
 		category->entities[i]->pos = new_pos;
