@@ -26,7 +26,7 @@ typedef struct game {
 typedef struct category {
 	unsigned int nb_entities;
 	sfTexture *texture;
-	sfIntRect *rect;
+	sfIntRect rect;
 	entity_t *entities[];
 } category_t;
 
@@ -35,9 +35,10 @@ void update(category_t *category, framebuffer_t *buffer);
 void init_game(game_t *game);
 void init_category(category_t *category, framebuffer_t *buffer);
 void init_entities(category_t *category);
-entity_t *init_entity(sfVector2f *pos, sfVector2f *size, sfVector2f *speed);
+entity_t *init_entity(sfVector2f pos, sfVector2f size, sfVector2f speed);
 sfRenderWindow *create_window();
 void disp(game_t *game, category_t *category);
-sfIntRect *set_rect(int left, int top, int width, int height);
+sfIntRect set_rect(int left, int top, int width, int height);
+sfVector2f add_vector(sfVector2f u, sfVector2f v);
 
 #endif

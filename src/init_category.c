@@ -21,9 +21,9 @@ void init_entities(category_t *category)
 {
 	sfVector2f pos1 = {0, 0};
 	sfVector2f index_rect1 = {0, 0};
-	sfVector2f speed1 = {5, 0};
+	sfVector2f speed1 = {2, 1};
 	category->nb_entities = 1;
-	category->entities[0] = init_entity(&pos1, &index_rect1, &speed1);
+	category->entities[0] = init_entity(pos1, index_rect1, speed1);
 	for (unsigned int i = 0; i != category->nb_entities; i++) {
 		category->entities[i]->sprite = sfSprite_create();
 		/* I will use sfSprite_setTextureRect(sfSprite* sprite, sfIntRect rectangle); for spritesheet or else*/
@@ -32,7 +32,7 @@ void init_entities(category_t *category)
 
 }
 
-entity_t *init_entity(sfVector2f *pos, sfVector2f *index_rect, sfVector2f *speed)
+entity_t *init_entity(sfVector2f pos, sfVector2f index_rect, sfVector2f speed)
 {
 	entity_t *entity = malloc(sizeof(entity_t));
 
@@ -42,13 +42,13 @@ entity_t *init_entity(sfVector2f *pos, sfVector2f *index_rect, sfVector2f *speed
 	return (entity);
 }
 
-sfIntRect *set_rect(int left, int top, int width, int height)
+sfIntRect set_rect(int left, int top, int width, int height)
 {
-	sfIntRect *rect = malloc(sizeof(sfIntRect));
+	sfIntRect rect;
 
-	rect->left = left;
-	rect->top = top;
-	rect->width = width;
-	rect->height = height;
+	rect.left = left;
+	rect.top = top;
+	rect.width = width;
+	rect.height = height;
 	return (rect);
 }
