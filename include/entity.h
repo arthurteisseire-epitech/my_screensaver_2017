@@ -15,7 +15,6 @@ typedef struct entity {
 	sfVector *size;
 	sfVector *speed;
 	sfSprite *sprite;
-	void (*update)();
 } entity_t;
 
 #endif
