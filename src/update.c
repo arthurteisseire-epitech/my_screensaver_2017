@@ -9,5 +9,6 @@
 
 void update(category_t *category, framebuffer_t *buffer)
 {
+	my_put_square(buffer, 0, 0, 50, 50, sfRed);
 	init_category(category, buffer);
 }
