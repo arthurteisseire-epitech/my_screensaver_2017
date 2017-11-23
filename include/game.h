@@ -10,6 +10,8 @@
 
 #define WIDTH 800
 #define HEIGHT 600
+#define TITLE "Le Titre"
+#define BIT_PER_PIXEL 32
 
 #include "framebuffer.h"
 #include "pixel.h"

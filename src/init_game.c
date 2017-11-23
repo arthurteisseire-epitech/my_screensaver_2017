@@ -14,10 +14,10 @@ void init_game(game_t *game)
 
 sfRenderWindow *create_window()
 {
-	sfVideoMode mode = {WIDTH, HEIGHT, 32};
+	sfVideoMode mode = {WIDTH, HEIGHT, BIT_PER_PIXEL};
 	sfRenderWindow *window;
 
-	window = sfRenderWindow_create(mode, "Le Titre", sfResize | sfClose, NULL);
+	window = sfRenderWindow_create(mode, TITLE, sfResize | sfClose, NULL);
 	if (!window)
 		exit(84);
 	return (window);
