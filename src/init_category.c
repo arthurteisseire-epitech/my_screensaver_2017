@@ -16,15 +16,18 @@ void init_category(category_t *category, framebuffer_t *buffer)
 
 void init_entities(category_t *category)
 {
+	sfVector2f pos1 = {0, 0};
+	sfVector2f size1 = {10, 10};
+	sfVector2f speed1 = {5, 0};
 	category->nb_entities = 1;
-	entities[0] = init_entity({0, 0}, {10, 10}, {5, 0});
-	for (int i = 0; i != category->nb_entities; i++)
+	category->entities[0] = init_entity(&pos1, &size1, &speed1);
+	for (unsigned int i = 0; i != category->nb_entities; i++)
 		sfSprite_setTexture(category->entities[i]->sprite, category->texture, 1); 
 }
 
-entity_t *init_entity(sfVector *pos, sfVector *size, sfVector *speed)
+entity_t *init_entity(sfVector2f *pos, sfVector2f *size, sfVector2f *speed)
 {
-	entity_t *entity;
+	entity_t *entity = malloc(sizeof(entity_t));
 
 	entity->pos = pos;
 	entity->size = size;

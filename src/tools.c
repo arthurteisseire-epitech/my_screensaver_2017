@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "pixel.h"
+#include "game.h"
 
 sfSprite *create_sprite_from_buffer(framebuffer_t *buffer)
 {
@@ -15,15 +15,4 @@ sfSprite *create_sprite_from_buffer(framebuffer_t *buffer)
 	sfTexture_updateFromPixels(texture, buffer->pixels, WIDTH, HEIGHT, 0, 0);
 	sfSprite_setTexture(sprite, texture, 1);
 	return (sprite);
-}
-
-void event(Game_t *game)
-{
-	/* Process events */
-	while (sfRenderWindow_pollEvent(game->window, &game->event))
-	{
-		/* Close window : exit */
-		if (game->event.type == sfEvtClosed)
-			sfRenderWindow_close(game->window);
-	}
 }

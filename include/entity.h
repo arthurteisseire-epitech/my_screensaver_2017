@@ -11,9 +11,9 @@
 #include <SFML/Graphics.h>
 
 typedef struct entity {
-	sfVector *pos;
-	sfVector *size;
-	sfVector *speed;
+	sfVector2f *pos;
+	sfVector2f *size;
+	sfVector2f *speed;
 	sfSprite *sprite;
 } entity_t;
 

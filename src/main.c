@@ -9,14 +9,14 @@
 
 int main(void)
 {
-	game_t *game;
-	category_t *squares;
+	game_t *game = malloc(sizeof(game_t));
+	category_t *squares = malloc(sizeof(category_t));
 
 	init_game(game);
-	init_category(squares);
-	while (sfRenderWindow_isOpen(game)) {
+	//init_category(squares, game->buffer);
+	while (sfRenderWindow_isOpen(game->window)) {
 		event(game);
-		update(squares);
+		update(squares, game->buffer);
 		disp(game, squares);
 	}
 	return (0);

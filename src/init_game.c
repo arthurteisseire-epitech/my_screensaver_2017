@@ -5,17 +5,19 @@
 ** By Arthur Teisseire
 */
 
-#include "struct.h"
+#include "game.h"
 
-void init_game(Game_t *game)
+void init_game(game_t *game)
 {
-	game->mode = {WIDTH, HEIGHT, 32};
-	game->window = create_window(game, "Title");
+	game->mode->width = WIDTH;
+	game->mode->height = HEIGHT;
+	game->mode->bitsPerPixel = 32;
+	create_window(game, "Title");
 }
 
-void create_window(Game_t *game, char const *title)
+void create_window(game_t *game, char const *title)
 {
-	game->window = sfRenderWindow_create(game->mode, title, sfResize | sfClose, NULL);
+	game->window = sfRenderWindow_create(*(game)->mode, title, sfResize | sfClose, NULL);
 	if (!game->window)
 		exit(84);
 }

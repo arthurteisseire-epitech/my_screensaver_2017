@@ -7,7 +7,7 @@
 
 #include "game.h"
 
-void update(game_t *game, category_t *category)
+void update(category_t *category, framebuffer_t *buffer)
 {
-	init_category(category);
+	init_category(category, buffer);
 }

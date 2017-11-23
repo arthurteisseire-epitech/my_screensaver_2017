@@ -9,8 +9,8 @@
 
 void disp(game_t *game, category_t *category)
 {
-	sfRenderWindow_clear(window, sfBlack);
-	for (int i = 0; i < category->size; i++)
+	sfRenderWindow_clear(game->window, sfBlack);
+	for (unsigned int i = 0; i < category->nb_entities; i++)
 		sfRenderWindow_drawSprite(game->window, category->entities[i]->sprite, NULL);
 	sfRenderWindow_display(game->window);
 }
