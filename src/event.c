@@ -9,11 +9,9 @@
 
 void event(game_t *game)
 {
-	/* Process events */
-	while (sfRenderWindow_pollEvent(game->window, game->event))
-	{
-		/* Close window : exit */
-		if (game->event->type == sfEvtClosed)
+	sfEvent event;
+
+	while (sfRenderWindow_pollEvent(game->window, &event))
+		if (event.type == sfEvtClosed)
 			sfRenderWindow_close(game->window);
-	}
 }

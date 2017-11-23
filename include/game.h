@@ -19,7 +19,7 @@
 
 typedef struct game {
 	framebuffer_t *buffer;
-	sfEvent *event;
+	//sfEvent *event;
 	sfRenderWindow *window;
 } game_t;
 
