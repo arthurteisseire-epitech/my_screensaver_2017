@@ -13,7 +13,7 @@ int main(void)
 	category_t *squares = malloc(sizeof(category_t));
 
 	init_game(game);
-	//init_category(squares, game->buffer);
+	init_category(squares, game->buffer);
 	while (sfRenderWindow_isOpen(game->window)) {
 		event(game);
 		update(squares, game->buffer);

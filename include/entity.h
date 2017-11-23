@@ -12,8 +12,8 @@
 
 typedef struct entity {
 	sfVector2f *pos;
-	sfVector2f *size;
 	sfVector2f *speed;
+	sfVector2f *index_rect;
 	sfSprite *sprite;
 } entity_t;
 

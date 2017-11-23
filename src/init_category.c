@@ -10,6 +10,9 @@
 void init_category(category_t *category, framebuffer_t *buffer)
 {
 	category->texture = sfTexture_create(WIDTH, HEIGHT);
+	category->rect = set_rect(0, 0, 50, 50);
+	buffer = framebuffer_create(WIDTH, HEIGHT);
+	my_put_square(buffer, 0, 0, 50, 50, sfRed);
 	sfTexture_updateFromPixels(category->texture, buffer->pixels, WIDTH, HEIGHT, 0, 0);
 	init_entities(category);
 }
@@ -17,23 +20,35 @@ void init_category(category_t *category, framebuffer_t *buffer)
 void init_entities(category_t *category)
 {
 	sfVector2f pos1 = {0, 0};
-	sfVector2f size1 = {10, 10};
+	sfVector2f index_rect1 = {0, 0};
 	sfVector2f speed1 = {5, 0};
 	category->nb_entities = 1;
-	category->entities[0] = init_entity(&pos1, &size1, &speed1);
+	category->entities[0] = init_entity(&pos1, &index_rect1, &speed1);
 	for (unsigned int i = 0; i != category->nb_entities; i++) {
 		category->entities[i]->sprite = sfSprite_create();
+		/* I will use sfSprite_setTextureRect(sfSprite* sprite, sfIntRect rectangle); for spritesheet or else*/
 		sfSprite_setTexture(category->entities[i]->sprite, category->texture, 1); 
 	}
 
 }
 
-entity_t *init_entity(sfVector2f *pos, sfVector2f *size, sfVector2f *speed)
+entity_t *init_entity(sfVector2f *pos, sfVector2f *index_rect, sfVector2f *speed)
 {
 	entity_t *entity = malloc(sizeof(entity_t));
 
 	entity->pos = pos;
-	entity->size = size;
+	entity->index_rect = index_rect;
 	entity->speed = speed;
 	return (entity);
+}
+
+sfIntRect *set_rect(int left, int top, int width, int height)
+{
+	sfIntRect *rect = malloc(sizeof(sfIntRect));
+
+	rect->left = left;
+	rect->top = top;
+	rect->width = width;
+	rect->height = height;
+	return (rect);
 }
