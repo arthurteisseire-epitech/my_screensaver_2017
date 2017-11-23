@@ -9,10 +9,8 @@
 
 void init_game(Game_t *game)
 {
-	char const *title = "Titre";
-
 	game->mode = {WIDTH, HEIGHT, 32};
-	game->window = create_window(game, title);
+	game->window = create_window(game, "Title");
 }
 
 void create_window(Game_t *game, char const *title)

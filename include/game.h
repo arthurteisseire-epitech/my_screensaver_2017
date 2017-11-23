@@ -22,8 +22,15 @@ typedef struct game {
 	sfRenderWindow *window;
 } game_t;
 
+typedef struct category {
+	int nb_entities;
+	entity_t *entities[];
+	sfTexture *texture;
+} category_t;
+
 void event(game_t *game);
 void init_game(game_t *game);
+void init_category(category_t gategory);
 void create_window(game_t *game, char const *title);
 
 #endif

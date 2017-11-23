@@ -11,11 +11,11 @@
 #include <SFML/Graphics.h>
 
 typedef struct entity {
-	sfVector *position;
+	sfVector *pos;
 	sfVector *size;
 	sfVector *speed;
-	sfTexture *texture;
 	sfSprite *sprite;
+	void (*update)();
 } entity_t;
 
 #endif

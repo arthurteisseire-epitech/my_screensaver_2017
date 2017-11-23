@@ -5,17 +5,19 @@
 ** By Arthur Teisseire
 */
 
+#include "game.h"
+
 int main(void)
 {
 	game_t *game;
-	entity_t *entities_array[1];
+	category_t *squares;
 
 	init_game(game);
-	init_entities(entities_array);
+	init_category(squares);
 	while (sfRenderWindow_isOpen(game)) {
 		event(game);
-		update(entities_array);
-		disp(game, entities_array);
+		update(squares);
+		disp(game, squares);
 	}
 	return (0);
 }
