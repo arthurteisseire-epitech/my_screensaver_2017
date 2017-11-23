@@ -16,7 +16,6 @@
 #include "entity.h"
 
 typedef struct game {
-	sfVideoMode *mode;
 	framebuffer_t *buffer;
 	sfEvent *event;
 	sfRenderWindow *window;
@@ -34,7 +33,7 @@ void init_game(game_t *game);
 void init_category(category_t *category, framebuffer_t *buffer);
 void init_entities(category_t *category);
 entity_t *init_entity(sfVector2f *pos, sfVector2f *size, sfVector2f *speed);
-void create_window(game_t *game, char const *title);
+sfRenderWindow *create_window();
 void disp(game_t *game, category_t *category);
 
 #endif

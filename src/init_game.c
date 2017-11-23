@@ -9,15 +9,16 @@
 
 void init_game(game_t *game)
 {
-	game->mode->width = WIDTH;
-	game->mode->height = HEIGHT;
-	game->mode->bitsPerPixel = 32;
-	create_window(game, "Title");
+	game->window = create_window();
 }
 
-void create_window(game_t *game, char const *title)
+sfRenderWindow *create_window()
 {
-	game->window = sfRenderWindow_create(*(game)->mode, title, sfResize | sfClose, NULL);
-	if (!game->window)
+	sfVideoMode mode = {WIDTH, HEIGHT, 32};
+	sfRenderWindow *window;
+
+	window = sfRenderWindow_create(mode, "Le Titre", sfResize | sfClose, NULL);
+	if (!window)
 		exit(84);
+	return (window);
 }
