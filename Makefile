@@ -15,7 +15,8 @@ SRC     =	$(DSRC)main.c \
 		$(DSRC)update.c \
 		$(DSRC)disp.c \
 		$(DSRC)init_category.c \
-		$(DSRC)init_game.c
+		$(DSRC)init_game.c \
+		$(DSRC)entities.c
 INC	=	$(realpath include)
 CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
 LDFLAGS	=	-l c_graph_prog

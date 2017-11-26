@@ -19,11 +19,9 @@ void init_category(category_t *category, framebuffer_t *buffer)
 
 void init_entities(category_t *category)
 {
-	category->nb_entities = 1;
-	sfVector2f pos1 = {0, HEIGHT / 2};
-	sfVector2f index_rect1 = {0, 0};
-	sfVector2f speed1 = {2, -1};
-	category->entities[0] = init_entity(pos1, index_rect1, speed1);
+	category->nb_entities = 2;
+	category->entities[0] = entity0();
+	category->entities[1] = entity1();
 	for (unsigned int i = 0; i != category->nb_entities; i++) {
 		category->entities[i]->sprite = sfSprite_create();
 		/* I will use sfSprite_setTextureRect(sfSprite* sprite, sfIntRect rectangle); for spritesheet or else*/

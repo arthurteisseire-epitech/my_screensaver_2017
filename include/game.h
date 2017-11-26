@@ -16,6 +16,7 @@
 #include "framebuffer.h"
 #include "pixel.h"
 #include "entity.h"
+#include "init.h"
 
 typedef struct game {
 	framebuffer_t *buffer;
