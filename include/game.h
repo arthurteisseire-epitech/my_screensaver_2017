@@ -31,6 +31,8 @@ typedef struct category {
 	entity_t *entities[];
 } category_t;
 
+#include "animations.h"
+
 void event(game_t *game);
 void update(category_t *category, framebuffer_t *buffer);
 void init_game(game_t *game);

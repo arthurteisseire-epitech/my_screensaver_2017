@@ -9,17 +9,10 @@
 
 void update(category_t *category, framebuffer_t *buffer)
 {
-	sfVector2f new_pos;
+	//void (*animation)(category_t *category)[2];
 
-	for (unsigned int i = 0; i < category->nb_entities; i++) {
-		new_pos = add_vector(category->entities[i]->pos, category->entities[i]->speed);
-		if (new_pos.x + category->rect.width > WIDTH || new_pos.x < 0)
-			category->entities[i]->speed.x *= -1;
-		if (new_pos.y + category->rect.height > HEIGHT || new_pos.y < 0)
-			category->entities[i]->speed.y *= -1;
-		sfSprite_setPosition(category->entities[i]->sprite, new_pos);
-		category->entities[i]->pos = new_pos;
-	}
+	//init_animations(animation);
+	animation1(category);
 }
 
 sfVector2f add_vector(sfVector2f u, sfVector2f v)
@@ -30,3 +23,10 @@ sfVector2f add_vector(sfVector2f u, sfVector2f v)
 	uv.y = u.y + v.y;
 	return (uv);
 }
+/*
+init_animations(void *(*animation)(category_t *category))
+{
+	animation[0] = animation0;
+	animation[1] = animation1;
+}
+*/
