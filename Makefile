@@ -9,7 +9,7 @@ DSRC	=	$(realpath src)/
 FUNC	=	$(DSRC)/functions/
 SRC     =	$(DSRC)main.c \
 		$(DSRC)pixel-functions.c \
-		$(DSRC)shapes-functions.c \
+		$(DSRC)shapes.c \
 		$(DSRC)tools.c \
 		$(DSRC)event.c \
 		$(DSRC)update.c \
