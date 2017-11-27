@@ -6,7 +6,7 @@
 ##
 
 DSRC	=	$(realpath src)/
-STATES	=	$(DSRC)/states/
+STATES	=	$(DSRC)states/
 SRC     =	$(STATES)event.c \
 		$(STATES)update.c \
 		$(STATES)disp.c \
@@ -14,7 +14,7 @@ SRC     =	$(STATES)event.c \
 		$(DSRC)pixel.c \
 		$(DSRC)shapes.c \
 		$(DSRC)tools.c \
-		$(DSRC)init_category.c \
+		$(DSRC)init_animations.c \
 		$(DSRC)init_game.c \
 		$(DSRC)entities.c \
 		$(DSRC)animations.c

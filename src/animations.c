@@ -6,7 +6,7 @@
 */
 #include "game.h"
 
-void animation0(category_t *category)
+void animation0(animations *category)
 {
 	sfVector2f new_pos;
 
@@ -21,7 +21,7 @@ void animation0(category_t *category)
 	}
 }
 
-void animation1(category_t *category)
+void animation1(animation_t *category)
 {
 	sfVector2f new_pos;
 

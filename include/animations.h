@@ -13,7 +13,7 @@
 init_animations(void *(*animation)(category_t *category));
 
 */
-void animation0(category_t *category);
-void animation1(category_t *category);
+void animation0(animation_t *animation);
+void animation1(animation_t *animation);
 
 #endif

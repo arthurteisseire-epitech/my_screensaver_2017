@@ -7,12 +7,12 @@
 
 #include "game.h"
 
-void update(category_t *category, framebuffer_t *buffer)
+void update(animation_t *animation, framebuffer_t *buffer)
 {
 	//void (*animation)(category_t *category)[2];
 
 	//init_animations(animation);
-	animation1(category);
+	animation1(animation);
 }
 
 sfVector2f add_vector(sfVector2f u, sfVector2f v)

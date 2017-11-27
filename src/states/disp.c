@@ -7,7 +7,7 @@
 
 #include "game.h"
 
-void disp(game_t *game, category_t *category)
+void disp(game_t *game, animation_t *category)
 {
 	sfRenderWindow_clear(game->window, sfBlack);
 	for (unsigned int i = 0; i < category->nb_entities; i++)

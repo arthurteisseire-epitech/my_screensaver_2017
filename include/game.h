@@ -19,6 +19,7 @@
 #include "init.h"
 #include "animation.h"
 #include "animations.h"
+#include "spritesheet.h"
 
 typedef struct game {
 	framebuffer_t *buffer;
@@ -26,20 +27,14 @@ typedef struct game {
 	sfRenderWindow *window;
 } game_t;
 
-typedef struct resources {
-	unsigned int nb_entities;
-	sfTexture *texture[];
-	animation_t *animations[];
-} resources_t;
-
 void event(game_t *game);
-void update(category_t *category, framebuffer_t *buffer);
+void update(animation_t *animation, framebuffer_t *buffer);
+void disp(game_t *game, animation_t *animation);
 void init_game(game_t *game);
-void init_category(category_t *category, framebuffer_t *buffer);
-void init_entities(category_t *category);
+void init_category(animation_t *animation, framebuffer_t *buffer);
+void init_entities(animation_t *animation[]);
 entity_t *init_entity(sfVector2f pos, sfVector2f size, sfVector2f speed);
 sfRenderWindow *create_window();
-void disp(game_t *game, category_t *category);
 sfIntRect set_rect(int left, int top, int width, int height);
 sfVector2f add_vector(sfVector2f u, sfVector2f v);
 
