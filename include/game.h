@@ -18,6 +18,7 @@
 #include "entity.h"
 #include "init.h"
 #include "animation.h"
+#include "animations.h"
 
 typedef struct game {
 	framebuffer_t *buffer;
@@ -25,14 +26,11 @@ typedef struct game {
 	sfRenderWindow *window;
 } game_t;
 
-typedef struct category {
+typedef struct resources {
 	unsigned int nb_entities;
-	sfTexture *texture;
-	sfIntRect rect;
-	entity_t *entities[];
-} category_t;
-
-#include "animations.h"
+	sfTexture *texture[];
+	animation_t *animations[];
+} resources_t;
 
 void event(game_t *game);
 void update(category_t *category, framebuffer_t *buffer);
