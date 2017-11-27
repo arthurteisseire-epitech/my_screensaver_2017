@@ -6,14 +6,14 @@
 ##
 
 DSRC	=	$(realpath src)/
-FUNC	=	$(DSRC)/functions/
-SRC     =	$(DSRC)main.c \
-		$(DSRC)pixel-functions.c \
+STATES	=	$(DSRC)/states/
+SRC     =	$(STATES)event.c \
+		$(STATES)update.c \
+		$(STATES)disp.c \
+		$(DSRC)main.c \
+		$(DSRC)pixel.c \
 		$(DSRC)shapes.c \
 		$(DSRC)tools.c \
-		$(DSRC)event.c \
-		$(DSRC)update.c \
-		$(DSRC)disp.c \
 		$(DSRC)init_category.c \
 		$(DSRC)init_game.c \
 		$(DSRC)entities.c \

@@ -27,7 +27,6 @@ void init_entities(category_t *category)
 		/* I will use sfSprite_setTextureRect(sfSprite* sprite, sfIntRect rectangle); for spritesheet or else*/
 		sfSprite_setTexture(category->entities[i]->sprite, category->texture, 1); 
 	}
-
 }
 
 entity_t *init_entity(sfVector2f pos, sfVector2f index_rect, sfVector2f speed)
