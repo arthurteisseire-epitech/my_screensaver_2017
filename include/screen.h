@@ -21,6 +21,7 @@
 #include "tools.h"
 #include "spritesheet.h"
 #include "animation.h"
+#include "messages.h"
 
 void init_screen(screen_t *sc);
 sfRenderWindow *create_window();
@@ -43,6 +44,5 @@ void init_entities_anim1(screen_t *sc);
 
 void init_textures(screen_t *sc);
 spritesheet_t *spritesheet0(screen_t *sc);
-
 
 #endif

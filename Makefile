@@ -10,6 +10,7 @@ STATES	=	$(DSRC)states/
 DRAW	=	$(DSRC)draw/
 TOOLS	=	$(DSRC)tools/
 INIT	=	$(DSRC)init/
+MSG	=	$(DSRC)messages/
 SRC     =	$(DSRC)main.c \
 		$(STATES)event.c \
 		$(STATES)update.c \
@@ -23,7 +24,13 @@ SRC     =	$(DSRC)main.c \
 		$(INIT)init_textures.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
-		$(TOOLS)tools.c
+		$(TOOLS)tools.c \
+		$(MSG)check_args.c \
+		$(MSG)doc_msg.c \
+		$(MSG)error_msg.c \
+		$(MSG)my_puterror.c \
+		$(MSG)my_putstr.c \
+		$(MSG)my_strlen.c
 INC	=	$(realpath include)
 CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
 LDFLAGS	=	-l c_graph_prog

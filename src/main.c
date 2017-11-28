@@ -11,6 +11,11 @@ int main(int ac, char **av)
 {
 	screen_t sc;
 
+	if (ac != 2) {
+		put_bad_nb();
+		return (84);
+	}
+	check_args(av[1]);
 	init_screen(&sc);
 	init_textures(&sc);
 	init_animations(&sc);
