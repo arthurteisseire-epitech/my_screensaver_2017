@@ -29,6 +29,8 @@ void event(screen_t *s);
 void update(screen_t *sc);
 void disp(screen_t *sc);
 
+void disp_entities(screen_t *sc, int index_anim);
+
 sfIntRect set_rect(int left, int top, int width, int height);
 sfVector2f add_vector(sfVector2f u, sfVector2f v);
 
