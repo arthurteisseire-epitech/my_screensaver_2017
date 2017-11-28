@@ -9,6 +9,9 @@
 
 void init_textures(screen_t *sc)
 {
-	sc->nb_spritesheet = 1;
+	for (int i = 0; i < sc->nb_spritesheet; i++) {
+		sc->spritesheets[i] = malloc(sizeof(spritesheet_t));
+		sc->spritesheets[i]->texture = sfTexture_create(WIDTH, HEIGHT);
+	}
 	sc->spritesheets[0] = spritesheet0(sc);
 }

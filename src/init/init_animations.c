@@ -10,7 +10,8 @@
 void init_animations(screen_t *sc)
 {
 	//set_description(animations);
-	sc->nb_anim = 2;
+	for (int i = 0; i < sc->nb_anim; i++)
+		sc->animations[i] = malloc(sizeof(animation_t));
 	init_entities(sc);
 	set_animations(sc);
 }

@@ -15,7 +15,7 @@ typedef struct animation {
 	char *description;
 	void (*launch)(struct animation *anim);
 	int nb_entities;
-	entity_t *entities[];
+	entity_t **entities;
 } animation_t;
 
 void animation0(animation_t *animation);
