@@ -21,6 +21,6 @@ typedef struct entity {
 entity_t *entity0(spritesheet_t *spritesheets[]);
 entity_t *entity1(spritesheet_t *spritesheets[]);
 
-entity_t *init_entity(sfVector2f pos, sfVector2f size, sfVector2f speed);
+entity_t *init_entity(sfVector2f pos, sfVector2f rect, sfVector2f speed, sfVector2f size);
 
 #endif

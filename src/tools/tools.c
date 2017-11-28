@@ -16,11 +16,12 @@ sfVector2f add_vector(sfVector2f u, sfVector2f v)
 	return (uv);
 }
 
-entity_t *init_entity(sfVector2f pos, sfVector2f index_rect, sfVector2f speed)
+entity_t *init_entity(sfVector2f pos, sfVector2f index_rect, sfVector2f speed, sfVector2f size)
 {
 	entity_t *entity = malloc(sizeof(entity_t));
 
 	entity->pos = pos;
+	entity->size = size;
 	entity->index_rect = index_rect;
 	entity->speed = speed;
 	return (entity);
