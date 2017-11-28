@@ -8,8 +8,8 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
-#define WIDTH 800
-#define HEIGHT 600
+#define WIDTH 1920
+#define HEIGHT 1080
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
 

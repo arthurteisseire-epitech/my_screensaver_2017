@@ -28,7 +28,7 @@ INC	=	$(realpath include)
 CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
 LDFLAGS	=	-l c_graph_prog
 OBJ	=	$(SRC:.c=.o)
-NAME	=	a.out
+NAME	=	my_screensaver
 
 all: $(NAME)
 

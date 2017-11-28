@@ -7,7 +7,7 @@
 
 #include "screen.h"
 
-int main(void)
+int main(int ac, char **av)
 {
 	screen_t sc;
 
