@@ -5,13 +5,13 @@
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
-void event(game_t *game)
+void event(screen_t *sc)
 {
 	sfEvent event;
 
-	while (sfRenderWindow_pollEvent(game->window, &event))
+	while (sfRenderWindow_pollEvent(sc->window, &event))
 		if (event.type == sfEvtClosed)
-			sfRenderWindow_close(game->window);
+			sfRenderWindow_close(sc->window);
 }

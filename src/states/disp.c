@@ -5,12 +5,12 @@
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
-void disp(game_t *game, animation_t *category)
+void disp(screen_t *sc)
 {
-	sfRenderWindow_clear(game->window, sfBlack);
-	for (unsigned int i = 0; i < category->nb_entities; i++)
-		sfRenderWindow_drawSprite(game->window, category->entities[i]->sprite, NULL);
-	sfRenderWindow_display(game->window);
+	sfRenderWindow_clear(sc->window, sfBlack);
+	for (int i = 0; i < sc->animations[0]->nb_entities; i++)
+		sfRenderWindow_drawSprite(sc->window, sc->animations[0]->entities[i]->sprite, NULL);
+	sfRenderWindow_display(sc->window);
 }

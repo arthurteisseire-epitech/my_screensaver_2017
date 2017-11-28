@@ -13,10 +13,12 @@
 typedef struct animation {
 	char *name;
 	char *description;
+	void (*launch)(struct animation *anim);
+	int nb_entities;
 	entity_t *entities[];
 } animation_t;
 
-void init_animations(animation_t *animations[]);
-void init_entities(animation_t *animations[]);
+void animation0(animation_t *animation);
+void animation1(animation_t *animation);
 
 #endif

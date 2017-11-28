@@ -8,8 +8,7 @@
 #ifndef FRAMEBUFFER_H
 #define FRAMEBUFFER_H
 
-#include <SFML/Graphics.h>
-#include <stdlib.h>
+#include "screen.h"
 
 typedef struct framebuffer {
 	unsigned int width;

@@ -5,19 +5,20 @@
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
 int main(void)
 {
-	game_t *game = malloc(sizeof(game_t));
-	category_t *squares = malloc(sizeof(category_t));
+	screen_t sc;
 
-	init_game(game);
-	init_category(squares, game->buffer);
-	while (sfRenderWindow_isOpen(game->window)) {
-		event(game);
-		update(squares, game->buffer);
-		disp(game, squares);
+	init_screen(&sc);
+	init_textures(&sc);
+	init_animations(&sc);
+	while (sfRenderWindow_isOpen(sc.window)) {
+		event(&sc);
+		update(&sc);
+		disp(&sc);
 	}
+	//destroy(sc);
 	return (0);
 }

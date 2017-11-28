@@ -8,11 +8,11 @@
 #ifndef SPRITESHEET_H
 #define SPRITESHEET_H
 
-#include "game.h"
+#include "screen.h"
 
 typedef struct spritesheet {
 	sfTexture *texture;
 	sfIntRect rect;
-} spritsheet_t;
+} spritesheet_t;
 
 #endif

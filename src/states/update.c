@@ -5,28 +5,9 @@
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
-void update(animation_t *animation, framebuffer_t *buffer)
+void update(screen_t *sc)
 {
-	//void (*animation)(category_t *category)[2];
-
-	//init_animations(animation);
-	animation1(animation);
+	sc->animations[0]->launch(sc->animations[0]);
 }
-
-sfVector2f add_vector(sfVector2f u, sfVector2f v)
-{
-	sfVector2f uv;
-
-	uv.x = u.x + v.x;
-	uv.y = u.y + v.y;
-	return (uv);
-}
-/*
-init_animations(void *(*animation)(category_t *category))
-{
-	animation[0] = animation0;
-	animation[1] = animation1;
-}
-*/

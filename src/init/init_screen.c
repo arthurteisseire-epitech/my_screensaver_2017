@@ -1,15 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : init_game.c
+** File Name : init_screen.c
 ** File description:
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
-void init_game(game_t *game)
+void init_screen(screen_t *sc)
 {
-	game->window = create_window();
+	sc->window = create_window();
 }
 
 sfRenderWindow *create_window()

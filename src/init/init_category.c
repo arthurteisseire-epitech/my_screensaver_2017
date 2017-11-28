@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "game.h"
+#include "screen.h"
 
 void init_category(category_t *category, framebuffer_t *buffer)
 {
