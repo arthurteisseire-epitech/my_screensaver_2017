@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "messages.h"
+#include "my.h"
 
 void my_putstr(char *str)
 {

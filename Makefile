@@ -22,12 +22,12 @@ SRC     =	$(DSRC)main.c \
 		$(TOOLS)my_atoi.c \
 		$(MSG)check_args.c \
 		$(MSG)doc_msg.c \
-		$(MSG)error_msg.c \
-		$(MSG)my_puterror.c \
-		$(MSG)my_putstr.c \
-		$(MSG)my_strlen.c
+		$(MSG)error_msg.c
 INC	=	$(realpath include)
-CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
+DLIB	=	$(realpath lib/my)/
+LIB	=	my
+LIBS	=	-L$(DLIB) -l$(LIB)
+CFLAGS	=	-Wall -W -Wextra -I$(INC)
 LDFLAGS	=	-l c_graph_prog
 OBJ	=	$(SRC:.c=.o)
 NAME	=	my_screensaver
@@ -35,15 +35,17 @@ NAME	=	my_screensaver
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-	gcc -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS)
+	make -C $(DLIB)
+	gcc -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 clean:
+	make clean -C $(DLIB)
 	rm -f *.gcno
 	rm -f *.gcna
 	rm -f $(OBJ)
 
 fclean: clean
+	make fclean -C $(DLIB)
 	rm -f $(NAME)
 
 re: fclean all
-	make clean

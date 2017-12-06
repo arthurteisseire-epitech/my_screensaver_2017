@@ -6,18 +6,19 @@
 */
 
 #include "screen.h"
+#include "my.h"
 
 void put_invalid_args()
 {
-	my_putstr("Invalid args\n");
+	my_puterror("Invalid args\n");
 }
 
 void put_bad_nb()
 {
-	my_putstr("./my_screensaver: bad arguments: 0 given but 1 is required\nretry with -h\n");
+	my_puterror("./my_screensaver: bad arguments: 0 given but 1 is required\nretry with -h\n");
 }
 
 void put_bad_index()
 {
-	my_putstr("Animation ID too big\nCheck for -h option\n");
+	my_puterror("Animation ID too big\nCheck for -h option\n");
 }

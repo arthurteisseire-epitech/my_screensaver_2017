@@ -18,8 +18,4 @@ void put_invalid_args();
 void put_bad_nb();
 void put_bad_index();
 
-void my_puterror(char *str);
-void my_putstr(char *str);
-int my_strlen(char *str);
-
 #endif

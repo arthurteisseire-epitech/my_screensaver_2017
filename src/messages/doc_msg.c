@@ -6,13 +6,16 @@
 */
 
 #include "screen.h"
+#include "my.h"
 
 void put_help()
 {
 	my_putstr("animation rendering in a CSFML window.\n");
 	my_putstr("\nUSAGE\n");
 	my_putstr(" ./my_screensaver [OPTIONS] animation_id\n");
-	my_putstr("  animation_id    ID of the animation to process (between 1 and 20).\n");
+	my_putstr("  animation_id    ID of the animation to process (between 1 and ");
+	my_put_nbr(MAX_ID);
+	my_putstr(").\n");
 	my_putstr("\nOPTIONS\n");
 	my_putstr(" -d               print the description of all the animations and quit.\n");
 	my_putstr(" -h               print the usage and quit.\n");

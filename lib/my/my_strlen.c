@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "messages.h"
+#include "my.h"
 
 int my_strlen(char *str)
 {
