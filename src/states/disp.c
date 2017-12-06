@@ -11,4 +11,5 @@ void disp(screen_t *sc)
 {
 	sfRenderWindow_clear(sc->window, sfBlack);
 	sfRenderWindow_display(sc->window);
+	sfRenderWindow_drawSprite(sc->window, sc->sprite, NULL);
 }

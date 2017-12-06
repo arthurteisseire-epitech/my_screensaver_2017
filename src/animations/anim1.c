@@ -10,5 +10,5 @@
 void anim1(screen_t *sc)
 {
 	my_put_square(sc->buffer, 0, 0, 200, 200, sfRed);
-	sfTexture_updateFromPixels(sc->texture, sc->buffer->pixel, WIDTH, HEIGHT, 0, 0);
+	sfTexture_updateFromPixels(sc->texture, sc->buffer->pixels, WIDTH, HEIGHT, 0, 0);
 }
