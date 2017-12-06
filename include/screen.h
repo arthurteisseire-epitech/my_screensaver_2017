@@ -19,6 +19,8 @@
 #include "framebuffer.h"
 #include "struct_screen.h"
 #include "messages.h"
+#include "animations.h"
+#include "tools.h"
 
 void init_screen(screen_t *sc);
 sfRenderWindow *create_window();
@@ -26,12 +28,5 @@ sfRenderWindow *create_window();
 void event(screen_t *s);
 void update(screen_t *sc);
 void disp(screen_t *sc);
-
-void my_put_square(framebuffer_t *buffer, unsigned int x, unsigned int y, unsigned int size_x, unsigned int size_y, sfColor color);
-framebuffer_t *framebuffer_create(unsigned int width, unsigned int height);
-void clear_buffer(framebuffer_t *buffer);
-void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color);
-
-void anim1(screen_t *sc);
 
 #endif
