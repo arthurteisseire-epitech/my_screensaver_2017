@@ -12,7 +12,7 @@
 #define HEIGHT 1080
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
-#define MAX_ID 1
+#define MAX_ID 2
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>

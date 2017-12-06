@@ -8,10 +8,11 @@
 #include "screen.h"
 
 static const anim_f anims[] = {
-	anim1
+	anim1,
+	anim2
 };
 
 void update(screen_t *sc)
 {
-	anims[0](sc);
+	anims[sc->id_anim](sc);
 }

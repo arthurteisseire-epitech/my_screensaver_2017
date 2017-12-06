@@ -9,7 +9,11 @@
 
 void init_screen(screen_t *sc, char *id_anim)
 {
-	sc->id_anim = my_atoi(id_anim);
+	sc->id_anim = my_atoi(id_anim) - 1;
+	if (sc->id_anim >= MAX_ID) {
+		//put_error_msg();
+		exit (84);
+	}
 	sc->window = create_window();
 	sc->buffer = framebuffer_create(WIDTH, HEIGHT);
 	sc->texture= sfTexture_create(WIDTH, HEIGHT);
