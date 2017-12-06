@@ -14,5 +14,5 @@ void put_invalid_args()
 
 void put_bad_nb()
 {
-	my_putstr("Bad nb of args\n");
+	my_putstr("./my_screensaver: bad arguments: 0 given but 1 is required\nretry with -h\n");
 }
