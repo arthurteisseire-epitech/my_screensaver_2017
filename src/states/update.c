@@ -7,7 +7,11 @@
 
 #include "screen.h"
 
+static const anim_f anims[] = {
+	anim1
+};
+
 void update(screen_t *sc)
 {
-	anim1(sc);
+	anims[0](sc);
 }

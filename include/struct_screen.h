@@ -16,6 +16,7 @@ typedef struct screen {
 	framebuffer_t *buffer;
 	sfTexture *texture;
 	sfSprite *sprite;
+	int id_anim;
 } screen_t;
 
 #endif

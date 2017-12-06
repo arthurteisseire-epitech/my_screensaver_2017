@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		return (84);
 	}
 	check_args(av[1]);
-	init_screen(&sc);
+	init_screen(&sc, av[1]);
 	while (sfRenderWindow_isOpen(sc.window)) {
 		event(&sc);
 		update(&sc);

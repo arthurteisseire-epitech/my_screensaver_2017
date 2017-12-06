@@ -10,6 +10,7 @@
 
 typedef void (*anim_f)(screen_t *sc);
 
+void init_animations(screen_t *sc);
 void anim1(screen_t *sc);
 void anim2(screen_t *sc);
 void anim2(screen_t *sc);
