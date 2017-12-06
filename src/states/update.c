@@ -9,4 +9,5 @@
 
 void update(screen_t *sc)
 {
+	anim1(sc);
 }

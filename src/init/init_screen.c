@@ -10,6 +10,9 @@
 void init_screen(screen_t *sc)
 {
 	sc->window = create_window();
+	sc->texture= sfTexture_create();
+	sc->sprite = sfSprite_create();
+	sfSprite_setTexture(sprite, texture, sfTrue);
 }
 
 sfRenderWindow *create_window()

@@ -10,10 +10,12 @@ STATES	=	$(DSRC)states/
 TOOLS	=	$(DSRC)tools/
 INIT	=	$(DSRC)init/
 MSG	=	$(DSRC)messages/
+ANIMS	=	$(DSRC)animations/
 SRC     =	$(DSRC)main.c \
 		$(STATES)event.c \
 		$(STATES)update.c \
 		$(STATES)disp.c \
+		$(ANIMS)anim1.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
