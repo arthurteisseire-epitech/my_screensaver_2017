@@ -10,16 +10,12 @@
 
 #include <SFML/Graphics.h>
 #include "framebuffer.h"
-#include "animation.h"
-#include "spritesheet.h"
 
 typedef struct screen {
-	int nb_anim;
-	int nb_spritesheet;
 	sfRenderWindow *window;
 	framebuffer_t *buffer;
-	spritesheet_t **spritesheets;
-	animation_t **animations;
+	sfTexture *texture;
+	sfSprite *sprite;
 } screen_t;
 
 #endif

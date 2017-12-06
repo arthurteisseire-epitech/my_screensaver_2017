@@ -9,6 +9,4 @@
 
 void update(screen_t *sc)
 {
-	sc->animations[0]->launch(sc->animations[0]);
-	sc->animations[1]->launch(sc->animations[1]);
 }

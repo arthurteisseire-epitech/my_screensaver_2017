@@ -12,15 +12,12 @@
 #define HEIGHT 1080
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
+#define MAX_ID 1
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
 #include "framebuffer.h"
 #include "struct_screen.h"
-#include "entity.h"
-#include "tools.h"
-#include "spritesheet.h"
-#include "animation.h"
 #include "messages.h"
 
 void init_screen(screen_t *sc);
@@ -29,20 +26,5 @@ sfRenderWindow *create_window();
 void event(screen_t *s);
 void update(screen_t *sc);
 void disp(screen_t *sc);
-
-void disp_entities(screen_t *sc, int index_anim);
-
-sfIntRect set_rect(int left, int top, int width, int height);
-sfVector2f add_vector(sfVector2f u, sfVector2f v);
-
-void init_animations(screen_t *sc);
-void init_entities(screen_t *sc);
-void set_animations(screen_t *sc);
-
-void init_entities_anim0(screen_t *sc);
-void init_entities_anim1(screen_t *sc);
-
-void init_textures(screen_t *sc);
-spritesheet_t *spritesheet0(screen_t *sc);
 
 #endif
