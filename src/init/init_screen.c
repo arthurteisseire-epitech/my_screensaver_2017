@@ -6,6 +6,7 @@
 */
 
 #include "screen.h"
+#include "my.h"
 
 void init_screen(screen_t *sc, char *id_anim)
 {

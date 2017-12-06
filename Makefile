@@ -19,7 +19,6 @@ SRC     =	$(DSRC)main.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
-		$(TOOLS)my_atoi.c \
 		$(MSG)check_args.c \
 		$(MSG)doc_msg.c \
 		$(MSG)error_msg.c

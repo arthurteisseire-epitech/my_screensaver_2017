@@ -15,5 +15,6 @@ void my_putchar(char c);
 void my_puterror(char *str);
 void my_putstr(char *str);
 int my_strlen(char *str);
+int my_atoi(char *str);
 
 #endif
