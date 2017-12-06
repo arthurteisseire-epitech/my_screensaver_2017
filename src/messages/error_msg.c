@@ -15,7 +15,9 @@ void put_invalid_args()
 
 void put_bad_nb()
 {
-	my_puterror("./my_screensaver: bad arguments: 0 given but 1 is required\nretry with -h\n");
+	my_puterror("./my_screensaver: ");
+	my_puterror("bad arguments: 0 given but 1 is required\n");
+	my_puterror("retry with -h\n");
 }
 
 void put_bad_index()
