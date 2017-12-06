@@ -12,5 +12,7 @@ void my_put_square(framebuffer_t *buffer, unsigned int x, unsigned int y, unsign
 framebuffer_t *framebuffer_create(unsigned int width, unsigned int height);
 void clear_buffer(framebuffer_t *buffer);
 void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color);
+sfColor random_grey_color();
+sfColor random_color();
 
 #endif

@@ -15,4 +15,5 @@ static const anim_f anims[] = {
 void update(screen_t *sc)
 {
 	anims[sc->id_anim](sc);
+	sfTexture_updateFromPixels(sc->texture, sc->buffer->pixels, WIDTH, HEIGHT, 0, 0);
 }

@@ -16,9 +16,11 @@ SRC     =	$(DSRC)main.c \
 		$(STATES)update.c \
 		$(STATES)disp.c \
 		$(ANIMS)anim1.c \
+		$(ANIMS)anim2.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
+		$(TOOLS)random_color.c \
 		$(MSG)check_args.c \
 		$(MSG)doc_msg.c \
 		$(MSG)error_msg.c
