@@ -16,6 +16,7 @@
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
+#include <math.h>
 #include "framebuffer.h"
 #include "struct_screen.h"
 #include "messages.h"
