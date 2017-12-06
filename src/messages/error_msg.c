@@ -16,3 +16,8 @@ void put_bad_nb()
 {
 	my_putstr("./my_screensaver: bad arguments: 0 given but 1 is required\nretry with -h\n");
 }
+
+void put_bad_index()
+{
+	my_putstr("Animation ID too big\nCheck for -h option\n");
+}
