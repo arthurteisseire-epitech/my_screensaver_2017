@@ -12,7 +12,7 @@ int main(int ac, char **av)
 	screen_t sc;
 
 	if (ac != 2) {
-		put_bad_nb();
+		put_bad_nb(ac);
 		return (84);
 	}
 	check_args(av[1]);

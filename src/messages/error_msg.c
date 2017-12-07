@@ -15,10 +15,12 @@ void put_invalid_arg(char *str)
 	my_puterror("\nretry with -h\n");
 }
 
-void put_bad_nb()
+void put_bad_nb(int ac)
 {
 	my_puterror("./my_screensaver: ");
-	my_puterror("bad arguments: 0 given but 1 is required\n");
+	my_puterror("bad number arguments: ");
+	my_put_nbr(ac - 1);
+	my_puterror(" given but 1 is required\n");
 	my_puterror("retry with -h\n");
 }
 
