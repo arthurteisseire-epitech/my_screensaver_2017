@@ -17,6 +17,8 @@ SRC     =	$(DSRC)main.c \
 		$(STATES)draw.c \
 		$(ANIMS)anim1.c \
 		$(ANIMS)anim2.c \
+		$(ANIMS)anim3.c \
+		$(ANIMS)anim4.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \

@@ -15,6 +15,7 @@ void init_screen(screen_t *sc, char *id_anim)
 		put_bad_index(sc->id_anim);
 		exit (84);
 	}
+	sc->clock = sfClock_create();
 	sc->window = create_window();
 	sc->buffer = framebuffer_create(WIDTH, HEIGHT);
 	sc->texture= sfTexture_create(WIDTH, HEIGHT);
@@ -27,7 +28,7 @@ sfRenderWindow *create_window()
 	sfVideoMode mode = {WIDTH, HEIGHT, BIT_PER_PIXEL};
 	sfRenderWindow *window;
 
-	window = sfRenderWindow_create(mode, TITLE, sfResize | sfFullscreen | sfClose, NULL);
+	window = sfRenderWindow_create(mode, TITLE, sfResize | /*sfFullscreen |*/ sfClose, NULL);
 	if (!window)
 		exit(84);
 	sfRenderWindow_setFramerateLimit(window, 120);

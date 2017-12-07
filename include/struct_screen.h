@@ -12,6 +12,10 @@
 #include "framebuffer.h"
 
 typedef struct screen {
+	sfClock *clock;
+	sfTime time;
+	float sec;
+	sfEvent event;
 	sfRenderWindow *window;
 	framebuffer_t *buffer;
 	sfTexture *texture;
