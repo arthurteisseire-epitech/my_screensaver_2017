@@ -28,7 +28,7 @@ sfRenderWindow *create_window()
 	sfVideoMode mode = {WIDTH, HEIGHT, BIT_PER_PIXEL};
 	sfRenderWindow *window;
 
-	window = sfRenderWindow_create(mode, TITLE, sfResize | /*sfFullscreen |*/ sfClose, NULL);
+	window = sfRenderWindow_create(mode, TITLE, sfResize | sfFullscreen | sfClose, NULL);
 	if (!window)
 		exit(84);
 	sfRenderWindow_setFramerateLimit(window, 120);

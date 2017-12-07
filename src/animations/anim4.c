@@ -10,7 +10,7 @@
 void anim4(screen_t *sc)
 {
 	sfVector2i origin = {2, 2};
-	sfVector2i end = {200, 200};
+	sfVector2i end = {600, 200};
 
 	draw_line(sc->buffer, origin, end, sfRed);;
 }
