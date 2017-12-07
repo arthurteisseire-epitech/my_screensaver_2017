@@ -13,6 +13,7 @@
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
 #define MAX_ID 4
+#define PI 3.1415
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
@@ -22,6 +23,7 @@
 #include "messages.h"
 #include "animations.h"
 #include "tools.h"
+#include "circle.h"
 
 void init_screen(screen_t *sc, char *id_anim);
 sfRenderWindow *create_window();
