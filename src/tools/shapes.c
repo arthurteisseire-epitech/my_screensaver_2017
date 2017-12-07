@@ -26,6 +26,12 @@ void draw_line(framebuffer_t *buffer, sfVector2i point_a, sfVector2i point_b, sf
 	}
 }
 
+void set_circle_pos(circle_t *circle, double x_new_pos, double y_new_pos)
+{
+	circle->x = x_new_pos;
+	circle->y = y_new_pos;
+}
+
 void draw_circle(framebuffer_t *buffer, circle_t circle, sfColor color)
 {
 	double size = circle.x + circle.radius + 1;

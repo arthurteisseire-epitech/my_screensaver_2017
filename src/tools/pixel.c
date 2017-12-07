@@ -22,8 +22,8 @@ void clear_buffer(framebuffer_t *buffer)
 {
 	int size = buffer->height * buffer->width * 4;
 
-	for (int i = 0; i < size; i++)
-		buffer->pixels[i] = 0;
+	for (int i = 3; i < size; i += 4)
+		buffer->pixels[i] += 0;
 }
 
 void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color)
