@@ -14,7 +14,7 @@ ANIMS	=	$(DSRC)animations/
 SRC     =	$(DSRC)main.c \
 		$(STATES)event.c \
 		$(STATES)update.c \
-		$(STATES)disp.c \
+		$(STATES)draw.c \
 		$(ANIMS)anim1.c \
 		$(ANIMS)anim2.c \
 		$(INIT)init_screen.c \
@@ -50,3 +50,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+	make clean

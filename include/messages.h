@@ -14,8 +14,8 @@
 void check_args(char *str);
 void put_help();
 void put_description();
-void put_invalid_args();
+void put_invalid_arg(char *str);
 void put_bad_nb();
-void put_bad_index();
+void put_bad_index(int id_index);
 
 #endif

@@ -16,5 +16,6 @@ void my_puterror(char *str);
 void my_putstr(char *str);
 int my_strlen(char *str);
 int my_atoi(char *str);
+int my_str_isnum(char *str);
 
 #endif

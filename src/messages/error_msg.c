@@ -8,9 +8,11 @@
 #include "screen.h"
 #include "my.h"
 
-void put_invalid_args()
+void put_invalid_arg(char *str)
 {
-	my_puterror("Invalid args\n");
+	my_puterror("./my_screensaver: invalid argument: ");
+	my_puterror(str);
+	my_puterror("\nretry with -h\n");
 }
 
 void put_bad_nb()
@@ -20,7 +22,9 @@ void put_bad_nb()
 	my_puterror("retry with -h\n");
 }
 
-void put_bad_index()
+void put_bad_index(int id_index)
 {
-	my_puterror("Animation ID too big\nCheck for -h option\n");
+	my_puterror("./my_screensaver: bad effect_no ");
+	my_put_nbr(id_index + 1);
+	my_puterror(": must be between 1 and 4.\n");
 }

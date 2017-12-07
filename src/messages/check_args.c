@@ -6,6 +6,7 @@
 */
 
 #include "screen.h"
+#include "my.h"
 
 void check_args(char *str)
 {
@@ -16,9 +17,9 @@ void check_args(char *str)
 		} else if (str[1] == 'd' && str[2] == '\0') {
 			put_description();
 			exit(0);
-		} else {
-			put_invalid_args();
-			exit(84);
 		}
+	} else if (!my_str_isnum(str)) {
+		put_invalid_arg(str);
+		exit(84);
 	}
 }

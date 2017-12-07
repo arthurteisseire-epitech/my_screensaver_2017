@@ -28,6 +28,6 @@ sfRenderWindow *create_window();
 
 void event(screen_t *s);
 void update(screen_t *sc);
-void disp(screen_t *sc);
+void draw(screen_t *sc);
 
 #endif

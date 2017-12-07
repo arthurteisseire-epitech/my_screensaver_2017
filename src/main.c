@@ -20,7 +20,7 @@ int main(int ac, char **av)
 	while (sfRenderWindow_isOpen(sc.window)) {
 		event(&sc);
 		update(&sc);
-		disp(&sc);
+		draw(&sc);
 	}
 	//destroy(sc);
 	return (0);

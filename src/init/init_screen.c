@@ -12,7 +12,7 @@ void init_screen(screen_t *sc, char *id_anim)
 {
 	sc->id_anim = my_atoi(id_anim) - 1;
 	if (sc->id_anim >= MAX_ID) {
-		put_bad_index();
+		put_bad_index(sc->id_anim);
 		exit (84);
 	}
 	sc->window = create_window();
@@ -27,7 +27,7 @@ sfRenderWindow *create_window()
 	sfVideoMode mode = {WIDTH, HEIGHT, BIT_PER_PIXEL};
 	sfRenderWindow *window;
 
-	window = sfRenderWindow_create(mode, TITLE, sfResize |/* sfFullscreen |*/ sfClose, NULL);
+	window = sfRenderWindow_create(mode, TITLE, sfResize | sfFullscreen | sfClose, NULL);
 	if (!window)
 		exit(84);
 	sfRenderWindow_setFramerateLimit(window, 120);
