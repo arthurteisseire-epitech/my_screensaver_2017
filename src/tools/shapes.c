@@ -26,7 +26,7 @@ void draw_line(framebuffer_t *buffer, sfVector2i point_a, sfVector2i point_b, sf
 	}
 }
 
-void set_circle_pos(circle_t *circle, double x_new_pos, double y_new_pos)
+void set_circle_pos(circle_t *circle, float x_new_pos, float y_new_pos)
 {
 	circle->x = x_new_pos;
 	circle->y = y_new_pos;
@@ -34,11 +34,11 @@ void set_circle_pos(circle_t *circle, double x_new_pos, double y_new_pos)
 
 void draw_circle(framebuffer_t *buffer, circle_t circle, sfColor color)
 {
-	double size = circle.x + circle.radius + 1;
-	double r_sqrt = pow(circle.radius, 2);
+	float size = circle.x + circle.radius + 1;
+	float r_sqrt = pow(circle.radius, 2);
 
-	for (double x = circle.x - circle.radius; x < size; x++)
-		for (double y = circle.y - circle.radius; y < size; y++)
+	for (float x = circle.x - circle.radius; x < size; x++)
+		for (float y = circle.y - circle.radius; y < size; y++)
 			if ((pow(x - circle.x, 2) + pow(y - circle.y, 2)) <= r_sqrt)
 				my_put_pixel(buffer, (int)x, (int)y, color);
 }
