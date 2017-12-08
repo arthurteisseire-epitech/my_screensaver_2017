@@ -7,6 +7,14 @@
 
 #include "pixel.h"
 
+static void clear(framebuffer_t *buffer)
+{
+	int size = buffer->height * buffer->width * 4;
+
+	for (int i = 0; i < size; i++)
+		buffer->pixels[i] = 0;
+}
+
 framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 {
 	framebuffer_t *buffer = malloc(sizeof(framebuffer_t));
@@ -14,7 +22,7 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 	buffer->width = width;
 	buffer->height = height;
 	buffer->pixels = malloc(sizeof(sfUint8) * width * height * 4);
-	clear_buffer(buffer);
+	clear(buffer);
 	return (buffer);
 }
 

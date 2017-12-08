@@ -9,15 +9,14 @@
 
 void anim4(screen_t *sc)
 {
-	int radius = 200;
-	circle_t circle = {radius, radius, radius};
-	static int x_speed = 100;
+	int x_speed = 200;
+	int radius = 100;
+	circle_t circle1 = {radius, radius, radius};
 
-	circle.x += sc->sec * x_speed;
-	if (circle.x + radius >= WIDTH) {
-		x_speed = -x_speed;
-		circle.x = WIDTH - radius;
+	circle1.y += sc->sec * x_speed;
+	if (circle1.y + radius >= HEIGHT) {
+		circle1.y = radius;
 		sfClock_restart(sc->clock);
 	}
-	draw_circle(sc->buffer, circle, sfRed);
+	draw_circle(sc->buffer, circle1, sfRed);
 }
