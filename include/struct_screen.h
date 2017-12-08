@@ -21,6 +21,7 @@ typedef struct screen {
 	sfTexture *texture;
 	sfSprite *sprite;
 	int id_anim;
+	void (*f)(int *coord, float speed);
 } screen_t;
 
 #endif

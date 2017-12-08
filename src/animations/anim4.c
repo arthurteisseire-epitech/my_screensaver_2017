@@ -9,10 +9,15 @@
 
 void anim4(screen_t *sc)
 {
-	sfVector2i origin = {2, 2};
-	sfVector2i end = {600, 200};
-	circle_t circle = {400, 400, 300};
+	int radius = 200;
+	circle_t circle = {radius, radius, radius};
+	static int x_speed = 100;
 
+	circle.x += sc->sec * x_speed;
+	if (circle.x + radius >= WIDTH) {
+		x_speed = -x_speed;
+		circle.x = WIDTH - radius;
+		sfClock_restart(sc->clock);
+	}
 	draw_circle(sc->buffer, circle, sfRed);
-	draw_line(sc->buffer, origin, end, sfRed);
 }
