@@ -9,22 +9,18 @@
 
 void anim1(screen_t *sc)
 {
-	static double x = 30;
-	static double y = 30;
-	double size = 15;
-	double d = size * 2;
-	circle_t circle = {d, d, size};
+	static double x = 0;
+	static double y = 0;
+	int size = 15;
 
-	while (y + d < HEIGHT) {
-		set_circle_pos(&circle, x + d, y + d);
-		//my_put_square(sc->buffer, x, y, size, size, random_color());
-		draw_circle(sc->buffer, circle, random_color());
-		x += d;
-		if (x + d >= WIDTH) {
-			y += d;
-			x = size;
+	while (y + size < HEIGHT) {
+		my_put_square(sc->buffer, x, y, size, size, random_color());
+		x += size;
+		if (x + size >= WIDTH) {
+			y += size;
+			x = 0;
 		}
 	}
-	x = size;
-	y = size;
+	x = 0;
+	y = 0;
 }
