@@ -9,15 +9,15 @@
 #define CIRCLE_H
 
 typedef struct circle {
-	float x;
-	float y;
-	float radius;
+	int x;
+	int y;
+	int radius;
 } circle_t;
 
 void draw_circle(framebuffer_t *buffer, circle_t circle, sfColor color);
-void set_circle_pos(circle_t *circle, float x_new_pos, float y_new_pos);
+void set_circle_pos(circle_t *circle, int x_new_pos, int y_new_pos);
 
-void move_back(int *x, float speed);
-void move_forward(int *x, float speed);
+void move_back(int *x, int speed);
+void move_forward(int *x, int speed);
 
 #endif

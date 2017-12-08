@@ -10,8 +10,15 @@
 
 void anim3(screen_t *sc)
 {
-	int size = 20;
+	int speed = 200;
+	int size = 100;
+	int x = 0;
+	int y = HEIGHT / 2;
 
-	my_put_square(sc->buffer, (int)sc->sec * size, (int)sc->sec / WIDTH, size, size, random_color());
-	//sfClock_restart(sc->clock);
+	x += sc->sec * speed;
+	if (x + size > WIDTH) {
+		x = 0;
+		sfClock_restart(sc->clock);
+	}
+	my_put_square(sc->buffer, x, y, size, size, sfRed);
 }
