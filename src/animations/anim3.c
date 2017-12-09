@@ -8,17 +8,29 @@
 #include "screen.h"
 #include "my.h"
 
+
+static void draw_it(screen_t *sc, int *x, int *y, int size)
+{
+	my_put_square(sc->buffer, x[0], y[0], size, size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[1], y[1], size, size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[0], y[2], size, size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[1], y[3], size, size, map(&sc->color_time));
+}
+
 void anim3(screen_t *sc)
 {
-	int speed = 200;
+	static int speed = 200;
 	int size = 100;
-	int x = 0;
-	int y = HEIGHT / 2;
-	
-	x += sc->sec * speed;
-	if (x + size > WIDTH) {
-		x = 0;
+	int x[] = {0, WIDTH - size, WIDTH / 2};
+	int y[] = {0, HEIGHT - size, HEIGHT / 1.3 - size, HEIGHT / 3 - size};
+
+	x[0] += sc->sec * speed;
+	x[1] -= sc->sec * speed;
+	if (x[0] + size > WIDTH) {
+		x[0] = 0;
+		x[1] = WIDTH - size;
 		sfClock_restart(sc->clock);
+		speed += 100;
 	}
-	my_put_square(sc->buffer, x, y, size, size, map(&sc->color_time));
+	draw_it(sc, x, y, size);
 }

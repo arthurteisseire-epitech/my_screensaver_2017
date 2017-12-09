@@ -23,7 +23,12 @@ void anim6(screen_t *sc)
 	int speed = 25;
 	int x = WIDTH / 2;
 	int y;
+	static int not_clear = 1;
 
+	if (not_clear) {
+		clear(sc->buffer);
+		not_clear = 0;
+	}
 	shade_it(sc->buffer);
 	if (size >= -60) {
 		size -= sc->sec * speed;
