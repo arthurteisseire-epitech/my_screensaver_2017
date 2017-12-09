@@ -28,5 +28,10 @@ void put_help()
 
 void put_description()
 {
-	my_putstr("1:\tPas encore\n");
+	my_putstr("1:\tNoise in black and white with squares\n");
+	my_putstr("2:\tSquares change position with time to give a 3d impress\n");
+	my_putstr("3:\t4 squares that comes faster and faster in x direction\n");
+	my_putstr("4:\tTeddy bear is in the place ! bigger and bigger, then the opposit\n");
+	my_putstr("5:\tTeddy become lower and lower then explode to be bigger\n");
+	my_putstr("6:\tSome funny colors for Teddy !\n");
 }
