@@ -29,6 +29,7 @@ SRC     =	$(DSRC)main.c \
 		$(TOOLS)color.c \
 		$(TOOLS)teddy.c \
 		$(TOOLS)explode.c \
+		$(TOOLS)circle.c \
 		$(MSG)check_args.c \
 		$(MSG)doc_msg.c \
 		$(MSG)error_msg.c
