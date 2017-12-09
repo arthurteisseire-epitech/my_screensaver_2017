@@ -34,11 +34,11 @@ void set_circle_pos(circle_t *circle, int x_new_pos, int y_new_pos)
 
 void draw_circle(framebuffer_t *buffer, circle_t circle, sfColor color)
 {
-	int size = circle.x + circle.radius + 1;
+	int size = circle.radius + 1;
 	int r_sqrt = pow(circle.radius, 2);
 
-	for (int x = circle.x - circle.radius; x < size; x++)
-		for (int y = circle.y - circle.radius; y < size; y++)
+	for (int x = circle.x - circle.radius; x < size + circle.x; x++)
+		for (int y = circle.y - circle.radius; y < size + circle.y; y++)
 			if ((pow(x - circle.x, 2) + pow(y - circle.y, 2)) <= r_sqrt)
 				my_put_pixel(buffer, x, y, color);
 }
