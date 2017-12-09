@@ -15,5 +15,9 @@ void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor
 sfColor random_grey_color();
 sfColor random_color();
 void draw_line(framebuffer_t *buffer, sfVector2i point_a, sfVector2i point_b, sfColor color);
+sfColor map(clock_color_t *ct);
+float get_decimal(float time);
+int floar(float time);
+sfColor color(sfUint8 r, sfUint8 g, sfUint8 b, sfUint8 a);
 
 #endif

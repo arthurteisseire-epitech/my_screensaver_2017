@@ -19,6 +19,8 @@ static void set_clock(screen_t *sc)
 {
 	sc->time = sfClock_getElapsedTime(sc->clock);
 	sc->sec = sc->time.microseconds / 1000000.0;
+	sc->color_time.time = sfClock_getElapsedTime(sc->color_time.clock);
+	sc->color_time.sec = sc->color_time.time.microseconds / 1000000.0;
 }
 
 void update(screen_t *sc)

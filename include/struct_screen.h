@@ -11,7 +11,15 @@
 #include <SFML/Graphics.h>
 #include "framebuffer.h"
 
+typedef struct clock_color {
+	sfColor color;
+	sfClock *clock;
+	sfTime time;
+	float sec;
+} clock_color_t;
+
 typedef struct screen {
+	clock_color_t color_time;
 	sfClock *clock;
 	sfTime time;
 	float sec;
@@ -21,6 +29,7 @@ typedef struct screen {
 	sfTexture *texture;
 	sfSprite *sprite;
 	int id_anim;
+	sfColor color;
 	void (*f)(int *coord, float speed);
 } screen_t;
 

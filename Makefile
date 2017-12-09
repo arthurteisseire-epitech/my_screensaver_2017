@@ -23,6 +23,8 @@ SRC     =	$(DSRC)main.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
 		$(TOOLS)random_color.c \
+		$(TOOLS)map.c \
+		$(TOOLS)color.c \
 		$(MSG)check_args.c \
 		$(MSG)doc_msg.c \
 		$(MSG)error_msg.c

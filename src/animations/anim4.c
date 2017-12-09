@@ -18,5 +18,5 @@ void anim4(screen_t *sc)
 		circle1.x = radius;
 		sfClock_restart(sc->clock);
 	}
-	draw_circle(sc->buffer, circle1, sfRed);
+	draw_circle(sc->buffer, circle1, map(&sc->color_time));
 }
