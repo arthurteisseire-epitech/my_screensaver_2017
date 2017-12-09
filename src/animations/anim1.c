@@ -14,7 +14,7 @@ void anim1(screen_t *sc)
 	int size = 15;
 
 	while (y + size < HEIGHT) {
-		my_put_square(sc->buffer, x, y, size, size, random_color());
+		my_put_square(sc->buffer, x, y, size, random_grey_color());
 		x += size;
 		if (x + size >= WIDTH) {
 			y += size;

@@ -13,7 +13,7 @@ void anim4(screen_t *sc)
 {
 	static int way = -1;
 	static int size = 300;
-	static int speed = 15;
+	int speed = 15;
 	int x = WIDTH / 2;
 	int y;
 

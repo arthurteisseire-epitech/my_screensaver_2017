@@ -13,7 +13,7 @@ void anim2(screen_t *sc)
 	static int y = 0;
 	int size = 20;
 
-	my_put_square(sc->buffer, x, y, size, size, map(&sc->color_time));
+	my_put_square(sc->buffer, x, y, size, map(&sc->color_time));
 	x += size * sc->sec;
 	if (x + size > WIDTH) {
 		x = 0;

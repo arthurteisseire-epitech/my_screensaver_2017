@@ -11,10 +11,10 @@
 
 static void draw_it(screen_t *sc, int *x, int *y, int size)
 {
-	my_put_square(sc->buffer, x[0], y[0], size, size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[1], y[1], size, size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[0], y[2], size, size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[1], y[3], size, size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[0], y[0], size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[1], y[1], size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[0], y[2], size, map(&sc->color_time));
+	my_put_square(sc->buffer, x[1], y[3], size, map(&sc->color_time));
 }
 
 void anim3(screen_t *sc)
