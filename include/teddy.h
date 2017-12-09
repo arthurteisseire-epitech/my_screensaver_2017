@@ -8,7 +8,6 @@
 #ifndef TEDDY_H
 #define TEDDY_H
 
-
 typedef struct teddy_size {
 	int st;
 	int head;

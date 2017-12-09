@@ -13,7 +13,7 @@
 
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
-#define MAX_ID 4
+#define MAX_ID 5
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
@@ -24,6 +24,7 @@
 #include "animations.h"
 #include "tools.h"
 #include "circle.h"
+#include "teddy.h"
 
 void init_screen(screen_t *sc, char *id_anim);
 sfRenderWindow *create_window();
@@ -31,5 +32,12 @@ sfRenderWindow *create_window();
 void event(screen_t *s);
 void update(screen_t *sc);
 void draw(screen_t *sc);
+
+/* TEDDY */
+void set_ted(circle_t *circle, sfVector2i *v, int radius);
+void init_sizes(teddy_t *teddy, int size);
+void set_pos(teddy_t *teddy, int x, int y);
+void set_circles(teddy_t *teddy);
+void draw_teddy(screen_t *sc, teddy_t *teddy);
 
 #endif

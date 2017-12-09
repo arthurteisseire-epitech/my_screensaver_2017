@@ -31,10 +31,10 @@ sfRenderWindow *create_window()
 	sfRenderWindow *window;
 
 	window = sfRenderWindow_create(
-		mode, TITLE, sfResize | /*sfFullscreen |*/ sfClose, NULL
+		mode, TITLE, sfResize | sfFullscreen | sfClose, NULL
 	);
 	if (!window)
 		exit(84);
-	sfRenderWindow_setFramerateLimit(window, 60);
+	sfRenderWindow_setFramerateLimit(window, 40);
 	return (window);
 }

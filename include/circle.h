@@ -15,7 +15,6 @@ typedef struct circle {
 
 void draw_circle(framebuffer_t *buffer, circle_t *circle, sfColor color);
 void set_circle_pos(circle_t *circle, int x_new_pos, int y_new_pos);
-void set_ted(circle_t *circle, sfVector2i *v, int radius);
 
 void move_back(int *x, int speed);
 void move_forward(int *x, int speed);

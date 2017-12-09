@@ -19,6 +19,7 @@ SRC     =	$(DSRC)main.c \
 		$(ANIMS)anim2.c \
 		$(ANIMS)anim3.c \
 		$(ANIMS)anim4.c \
+		$(ANIMS)anim5.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \
