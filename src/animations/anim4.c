@@ -13,15 +13,14 @@ void anim4(screen_t *sc)
 {
 	static int way = -1;
 	static int size = 300;
-	int speed = 15;
+	static int speed = 15;
 	int x = WIDTH / 2;
 	int y;
 
 	size += sc->sec * speed * way;
 	y = HEIGHT / 2 + size / 2;
-	if (size >= 300 || size <= -100) {
+	if (size >= 300 || size <= -300) {
 		way *= -1;
-		explode(sc);
 		sfClock_restart(sc->clock);
 	}
 	init_sizes(&teddy, size);
