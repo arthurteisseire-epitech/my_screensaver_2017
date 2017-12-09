@@ -10,7 +10,7 @@
 void anim4(screen_t *sc)
 {
 	int x_speed = 200;
-	int radius = 100;
+	int radius = 70;
 	circle_t circle1 = {radius, HEIGHT / 2, radius};
 
 	circle1.x += sc->sec * x_speed;
