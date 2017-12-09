@@ -31,7 +31,7 @@ sfRenderWindow *create_window()
 	sfRenderWindow *window;
 
 	window = sfRenderWindow_create(
-		mode, TITLE, sfResize |/* sfFullscreen |*/ sfClose, NULL
+		mode, TITLE, sfResize | /*sfFullscreen |*/ sfClose, NULL
 	);
 	if (!window)
 		exit(84);

@@ -19,5 +19,6 @@ sfColor map(clock_color_t *ct);
 float get_decimal(float time);
 int floar(float time);
 sfColor color(sfUint8 r, sfUint8 g, sfUint8 b, sfUint8 a);
+void set_vpos(sfVector2i *vector, int x_new_pos, int y_new_pos);
 
 #endif
