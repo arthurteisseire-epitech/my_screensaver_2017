@@ -11,10 +11,20 @@
 
 static void draw_it(screen_t *sc, int *x, int *y, int size)
 {
-	my_put_square(sc->buffer, x[0], y[0], size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[1], y[1], size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[0], y[2], size, map(&sc->color_time));
-	my_put_square(sc->buffer, x[1], y[3], size, map(&sc->color_time));
+	sfVector2i v0;
+	sfVector2i v1;
+	sfVector2i v2;
+	sfVector2i v3;
+
+	set_vpos(&v0, x[0], y[0]);
+	set_vpos(&v1, x[1], y[1]);
+	set_vpos(&v2, x[0], y[2]);
+	set_vpos(&v3, x[1], y[3]);
+
+	draw_sqrt(sc->buffer, v0, size, map(&sc->color_time));
+	draw_sqrt(sc->buffer, v1, size, map(&sc->color_time));
+	draw_sqrt(sc->buffer, v2, size, map(&sc->color_time));
+	draw_sqrt(sc->buffer, v3, size, map(&sc->color_time));
 }
 
 void anim3(screen_t *sc)

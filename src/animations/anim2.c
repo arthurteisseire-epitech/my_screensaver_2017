@@ -9,18 +9,17 @@
 
 void anim2(screen_t *sc)
 {
-	static int x = 0;
-	static int y = 0;
+	static sfVector2i pos = {0, 0};
 	int size = 20;
 
-	my_put_square(sc->buffer, x, y, size, map(&sc->color_time));
-	x += size * sc->sec;
-	if (x + size > WIDTH) {
-		x = 0;
-		y += size * sc->sec;
+	draw_sqrt(sc->buffer, pos, size, map(&sc->color_time));
+	pos.x += size * sc->sec;
+	if (pos.x + size > WIDTH) {
+		pos.x = 0;
+		pos.y += size * sc->sec;
 	}
-	if (y + size > HEIGHT)
-		y = 0;
+	if (pos.y + size > HEIGHT)
+		pos.y = 0;
 	if (sc->sec >= 25)
 		sfClock_restart(sc->clock);
 }

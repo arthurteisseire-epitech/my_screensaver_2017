@@ -7,21 +7,21 @@
 
 #include "screen.h"
 
-void my_put_square(framebuffer_t *buffer, unsigned int x, unsigned int y, unsigned int size, sfColor color)
+void draw_sqrt(framebuffer_t *buffer, sfVector2i pos, unsigned size, sfColor c)
 {
-	for (unsigned int it_x = 0; it_x < size; it_x++)
-		for (unsigned int it_y = 0; it_y < size; it_y++)
-			my_put_pixel(buffer, x + it_x, y + it_y, color);
+	for (unsigned it_x = 0; it_x < size; it_x++)
+		for (unsigned it_y = 0; it_y < size; it_y++)
+			my_put_pixel(buffer, pos.x + it_x, pos.y + it_y, c);
 }
 
-void draw_line(framebuffer_t *buffer, sfVector2i point_a, sfVector2i point_b, sfColor color)
+void draw_line(framebuffer_t *buffer, sfVector2i a, sfVector2i b, sfColor color)
 {
-	int dx = point_b.x - point_a.x;
-	int dy = point_b.y - point_a.y;
+	int dx = b.x - a.x;
+	int dy = b.y - a.y;
 	int y;
 
-	for (int x = point_a.x; x < point_b.x; x++) {
-		y = point_a.y + (dy * (x - point_a.x) / dx);
+	for (int x = a.x; x < b.x; x++) {
+		y = a.y + (dy * (x - a.x) / dx);
 		my_put_pixel(buffer, x, y, color);
 	}
 }

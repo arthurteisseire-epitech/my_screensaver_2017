@@ -9,18 +9,17 @@
 
 void anim1(screen_t *sc)
 {
-	static double x = 0;
-	static double y = 0;
+	static sfVector2i pos = {0, 0};
 	int size = 15;
 
-	while (y + size < HEIGHT) {
-		my_put_square(sc->buffer, x, y, size, random_grey_color());
-		x += size;
-		if (x + size >= WIDTH) {
-			y += size;
-			x = 0;
+	while (pos.y + size < HEIGHT) {
+		draw_sqrt(sc->buffer, pos, size, random_grey_color());
+		pos.x += size;
+		if (pos.x + size >= WIDTH) {
+			pos.y += size;
+			pos.x = 0;
 		}
 	}
-	x = 0;
-	y = 0;
+	pos.x = 0;
+	pos.y = 0;
 }
