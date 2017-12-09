@@ -36,7 +36,7 @@ void set_pos(teddy_t *teddy, int x, int y)
 		y + teddy->size.st - teddy->size.less_m);
 	set_vpos(&teddy->pos.fr, x + teddy->size.st - teddy->size.less_m,
 		y + teddy->size.st - teddy->size.less_m);
-	set_vpos(&teddy->pos.ear_l, x - teddy->size.head + teddy->size.less_h, 
+	set_vpos(&teddy->pos.ear_l, x - teddy->size.head + teddy->size.less_h,
 		y - teddy->size.st - teddy->size.head * 2 + teddy->size.less_h);
 	set_vpos(&teddy->pos.ear_r, x + teddy->size.head - teddy->size.less_h,
 		y - teddy->size.st - teddy->size.head * 2 + teddy->size.less_h);
