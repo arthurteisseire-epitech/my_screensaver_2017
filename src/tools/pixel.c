@@ -35,10 +35,10 @@ void clear_buffer(framebuffer_t *buffer)
 			buffer->pixels[i] -= 2;
 }
 
-void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color)
+void my_put_pixel(framebuffer_t *buffer, unsigned x, unsigned y, sfColor color)
 {
-	unsigned int pos_x = x * 4;
-	unsigned int pos_y = buffer->width * y * 4;
+	unsigned pos_x = x * 4;
+	unsigned pos_y = buffer->width * y * 4;
 
 	buffer->pixels[pos_y + pos_x] = color.r;
 	buffer->pixels[pos_y + pos_x + 1] = color.g;
