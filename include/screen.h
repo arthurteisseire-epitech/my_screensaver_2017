@@ -13,7 +13,7 @@
 
 #define TITLE "Le Titre"
 #define BIT_PER_PIXEL 32
-#define MAX_ID 5
+#define MAX_ID 6
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
@@ -39,5 +39,7 @@ void init_sizes(teddy_t *teddy, int size);
 void set_pos(teddy_t *teddy, int x, int y);
 void set_circles(teddy_t *teddy);
 void draw_teddy(screen_t *sc, teddy_t *teddy);
+
+void clear(framebuffer_t *buffer);
 
 #endif

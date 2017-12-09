@@ -7,7 +7,7 @@
 
 #include "pixel.h"
 
-static void clear(framebuffer_t *buffer)
+void clear(framebuffer_t *buffer)
 {
 	int size = buffer->height * buffer->width * 4;
 

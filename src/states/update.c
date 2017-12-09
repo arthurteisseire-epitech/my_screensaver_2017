@@ -13,7 +13,8 @@ static const anim_f anims[] = {
 	anim2,
 	anim3,
 	anim4,
-	anim5
+	anim5,
+	anim6
 };
 
 static void set_clock(screen_t *sc)

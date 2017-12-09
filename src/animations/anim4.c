@@ -21,6 +21,7 @@ void anim4(screen_t *sc)
 	y = HEIGHT / 2 + size / 2;
 	if (size >= 300 || size <= -100) {
 		way *= -1;
+		explode(sc);
 		sfClock_restart(sc->clock);
 	}
 	init_sizes(&teddy, size);
