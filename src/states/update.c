@@ -29,5 +29,7 @@ void update(screen_t *sc)
 {
 	set_clock(sc);
 	anims[sc->id_anim](sc);
-	sfTexture_updateFromPixels(sc->texture, sc->buffer->pixels, WIDTH, HEIGHT, 0, 0);
+	sfTexture_updateFromPixels(
+		sc->texture, sc->buffer->pixels, WIDTH, HEIGHT, 0, 0
+	);
 }
