@@ -45,4 +45,10 @@ typedef struct teddy {
 	teddy_circles_t circles;
 } teddy_t;
 
+void set_ted(circle_t *circle, sfVector2i *v, int radius);
+void init_sizes(teddy_t *teddy, int size);
+void set_pos(teddy_t *teddy, int x, int y);
+void set_circles(teddy_t *teddy);
+void draw_teddy(screen_t *sc, teddy_t *teddy);
+
 #endif

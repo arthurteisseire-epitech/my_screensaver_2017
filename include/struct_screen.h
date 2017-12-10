@@ -8,9 +8,6 @@
 #ifndef STRUCT_SCREEN_H
 #define STRUCT_SCREEN_H
 
-#include <SFML/Graphics.h>
-#include "framebuffer.h"
-
 typedef struct clock_color {
 	sfColor color;
 	sfClock *clock;

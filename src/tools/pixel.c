@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "pixel.h"
+#include "framebuffer.h"
 
 void clear(framebuffer_t *buffer)
 {

@@ -25,7 +25,7 @@ void init_screen(screen_t *sc, char *id_anim)
 	sfSprite_setTexture(sc->sprite, sc->texture, sfTrue);
 }
 
-sfRenderWindow *create_window()
+sfRenderWindow *create_window(void)
 {
 	sfVideoMode mode = {WIDTH, HEIGHT, BIT_PER_PIXEL};
 	sfRenderWindow *window;
