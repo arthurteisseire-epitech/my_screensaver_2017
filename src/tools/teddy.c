@@ -26,8 +26,10 @@ void init_sizes(teddy_t *teddy, int size)
 
 void set_pos(teddy_t *teddy, int x, int y)
 {
+	int ad = teddy->size.st / 20;
+
 	set_vpos(&teddy->pos.t, x, y);
-	set_vpos(&teddy->pos.h, x, y - teddy->size.st - teddy->size.head + 10);
+	set_vpos(&teddy->pos.h, x, y - teddy->size.st - teddy->size.head + ad);
 	set_vpos(&teddy->pos.hl, x - teddy->size.st + teddy->size.less_m,
 		y - teddy->size.st + teddy->size.less_m);
 	set_vpos(&teddy->pos.hr, x + teddy->size.st - teddy->size.less_m,
