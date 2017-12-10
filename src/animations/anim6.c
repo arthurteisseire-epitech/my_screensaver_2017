@@ -11,9 +11,9 @@ static teddy_t teddy;
 
 static void shade_it(framebuffer_t *buffer)
 {
-        int size = buffer->height * buffer->width * 4;
+	int size = buffer->height * buffer->width * 4;
 
-        for (int i = 3; i < size; i += 4)
+	for (int i = 3; i < size; i += 4)
 		buffer->pixels[i] = (buffer->pixels[i] + 9) % 252;
 }
 
