@@ -15,6 +15,7 @@ SRC     =	$(DSRC)main.c \
 		$(STATES)event.c \
 		$(STATES)update.c \
 		$(STATES)draw.c \
+		$(STATES)destroy.c \
 		$(ANIMS)anim1.c \
 		$(ANIMS)anim2.c \
 		$(ANIMS)anim3.c \

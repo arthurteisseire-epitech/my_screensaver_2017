@@ -31,5 +31,6 @@ sfRenderWindow *create_window(void);
 void event(screen_t *sc);
 void update(screen_t *sc);
 void draw(screen_t *sc);
+void destroy(screen_t *sc);
 
 #endif
