@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "framebuffer.h"
+#include "screen.h"
 
 void clear(framebuffer_t *buffer)
 {
@@ -25,16 +25,6 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 	clear(buffer);
 	return (buffer);
 }
-
-void clear_buffer(framebuffer_t *buffer)
-{
-	int size = buffer->height * buffer->width * 4;
-
-	for (int i = 3; i < size; i += 4)
-		if (buffer->pixels[i] >= 2)
-			buffer->pixels[i] -= 2;
-}
-
 void my_put_pixel(framebuffer_t *buffer, unsigned x, unsigned y, sfColor color)
 {
 	unsigned pos_x = x * 4;
@@ -45,3 +35,13 @@ void my_put_pixel(framebuffer_t *buffer, unsigned x, unsigned y, sfColor color)
 	buffer->pixels[pos_y + pos_x + 2] = color.b;
 	buffer->pixels[pos_y + pos_x + 3] = color.a;
 }
+
+void fade(screen_t *sc)
+{
+	int size = sc->buffer->height * sc->buffer->width * 4;
+
+	for (int i = 3; i < size; i += 4)
+		if (sc->buffer->pixels[i] >= 2)
+			sc->buffer->pixels[i] -= 2;
+}
+

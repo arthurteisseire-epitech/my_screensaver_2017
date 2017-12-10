@@ -14,7 +14,7 @@ void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor
 void draw_sqrt(framebuffer_t *buffer, sfVector2i pos, unsigned size, sfColor c);
 void draw_line(framebuffer_t *buffer, sfVector2i a, sfVector2i b, sfColor c);
 
-void clear_buffer(framebuffer_t *buffer);
+void fade(screen_t *sc);
 void clear(framebuffer_t *buffer);
 
 sfColor color(sfUint8 r, sfUint8 g, sfUint8 b, sfUint8 a);

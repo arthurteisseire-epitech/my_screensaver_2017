@@ -10,7 +10,7 @@
 void draw(screen_t *sc)
 {
 	sfRenderWindow_clear(sc->window, sfBlack);
-	clear_buffer(sc->buffer);
+	fade(sc);
 	sfRenderWindow_drawSprite(sc->window, sc->sprite, NULL);
 	sfRenderWindow_display(sc->window);
 }
