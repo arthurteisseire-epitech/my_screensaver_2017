@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : functions.c
+** File Name : pixel.c
 ** File description:
 ** By Arthur Teisseire
 */

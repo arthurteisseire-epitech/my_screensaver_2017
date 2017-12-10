@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : sc->event.c
+** File Name : event.c
 ** File description:
 ** By Arthur Teisseire
 */

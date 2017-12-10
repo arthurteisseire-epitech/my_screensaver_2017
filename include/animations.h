@@ -18,9 +18,5 @@ void anim3(screen_t *sc);
 void anim4(screen_t *sc);
 void anim5(screen_t *sc);
 void anim6(screen_t *sc);
-void anim7(screen_t *sc);
-void anim8(screen_t *sc);
-void anim9(screen_t *sc);
-void anim10(screen_t *sc);
 
 #endif

@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : set_color.c
+** File Name : color.c
 ** File description:
 ** By Arthur Teisseire
 */

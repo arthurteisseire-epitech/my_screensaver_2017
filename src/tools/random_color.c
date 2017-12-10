@@ -7,7 +7,7 @@
 
 #include "screen.h"
 
-sfColor random_color()
+sfColor random_color(void)
 {
 	sfColor color;
 
@@ -18,7 +18,7 @@ sfColor random_color()
 	return (color);
 }
 
-sfColor random_grey_color()
+sfColor random_grey_color(void)
 {
 	sfColor color;
 	int shade = rand() % 255;
