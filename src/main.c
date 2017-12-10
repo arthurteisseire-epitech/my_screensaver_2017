@@ -22,6 +22,6 @@ int main(int ac, char **av)
 		update(&sc);
 		draw(&sc);
 	}
-	//destroy(sc);
+	destroy(&sc);
 	return (0);
 }
