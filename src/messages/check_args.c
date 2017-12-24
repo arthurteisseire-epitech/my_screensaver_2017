@@ -13,13 +13,10 @@ void check_args(char *str)
 	if (str[0] == '-') {
 		if (str[1] == 'h' && str[2] == '\0') {
 			put_help();
-			exit(0);
 		} else if (str[1] == 'd' && str[2] == '\0') {
 			put_description();
-			exit(0);
 		}
 	} else if (!my_str_isnum(str)) {
 		put_invalid_arg(str);
-		exit(84);
 	}
 }
