@@ -13,7 +13,7 @@ void init_screen(screen_t *sc, char *id_anim)
 	sc->id_anim = my_atoi(id_anim) - 1;
 	if (sc->id_anim >= MAX_ID) {
 		put_bad_index(sc->id_anim);
-		exit (84);
+		return;
 	}
 	sc->color_time.color = color(255, 0, 0, 255);
 	sc->color_time.clock = sfClock_create();
@@ -34,7 +34,7 @@ sfRenderWindow *create_window(void)
 		mode, TITLE, sfResize | sfFullscreen | sfClose, NULL
 	);
 	if (!window)
-		exit(84);
+		return (NULL);
 	sfRenderWindow_setFramerateLimit(window, 40);
 	return (window);
 }
