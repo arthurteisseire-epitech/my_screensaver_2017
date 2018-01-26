@@ -39,7 +39,7 @@ DLIB	=	$(realpath lib/my)/
 LIB	=	my
 LIBS	=	-L$(DLIB) -l$(LIB)
 CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
-LDFLAGS	=	-l c_graph_prog -lm
+LDFLAGS	=	-l c_graph_prog -lm 
 OBJ	=	$(SRC:.c=.o)
 NAME	=	my_screensaver
 
