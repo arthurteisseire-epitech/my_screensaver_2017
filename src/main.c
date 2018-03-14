@@ -15,7 +15,10 @@ int main(int ac, char **av)
 		put_bad_nb(ac);
 		return (84);
 	}
-	check_args(av[1]);
+	if (check_args(av[1]) == -1)
+		return (84);
+	else if (check_args(av[1]) == 1)
+		return (0);
 	init_screen(&sc, av[1]);
 	while (sfRenderWindow_isOpen(sc.window)) {
 		event(&sc);

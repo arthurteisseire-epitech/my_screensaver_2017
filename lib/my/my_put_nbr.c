@@ -9,20 +9,19 @@
 
 int my_put_nbr(int nb)
 {
-	int size = 0;
+	int isneg = 0;
 
 	if (nb < 0) {
 		my_putchar('-');
 		nb = -nb;
-		size++;
+		isneg = 1;
 	}
 	if (nb > 9) {
-		size += my_put_nbr(nb / 10);
+		my_put_nbr(nb / 10);
 		my_putchar(nb % 10 + '0');
-		return (size + 1);
-	} else {
+	} else
 		my_putchar(nb + '0');
-		size++;
-	}
-	return (size);
+	if (isneg)
+		return (-nb);
+	return (nb);
 }

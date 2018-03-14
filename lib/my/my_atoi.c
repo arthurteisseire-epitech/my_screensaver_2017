@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-int my_atoi(char *str)
+int my_atoi(char const *str)
 {
 	int nb = 0;
 	int isneg = str[0] == '-' ? 1 : 0;

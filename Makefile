@@ -5,6 +5,7 @@
 ## Arthur Teisseire
 ##
 
+CC	=	gcc
 DSRC	=	$(realpath src)/
 STATES	=	$(DSRC)states/
 TOOLS	=	$(DSRC)tools/

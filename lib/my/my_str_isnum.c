@@ -5,7 +5,7 @@
 ** Arthur Teisseire
 */
 
-int my_str_isnum(char *str)
+int my_str_isnum(char const *str)
 {
 	int i = 0;
 

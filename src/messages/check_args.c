@@ -8,15 +8,18 @@
 #include "screen.h"
 #include "my.h"
 
-void check_args(char *str)
+int check_args(char *str)
 {
-	if (str[0] == '-') {
-		if (str[1] == 'h' && str[2] == '\0') {
-			put_help();
-		} else if (str[1] == 'd' && str[2] == '\0') {
-			put_description();
-		}
-	} else if (!my_str_isnum(str)) {
+	int num = my_atoi(str);
+	if (my_strcmp(str, "-h") == 0) {
+		put_help();
+		return (1);
+	} else if (my_strcmp(str, "-d") == 0) {
+		put_description();
+		return (1);
+	} else if (!my_str_isnum(str) || num > 4 || num < 1) {
 		put_invalid_arg(str);
+		return (-1);
 	}
+	return (0);
 }

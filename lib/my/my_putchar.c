@@ -5,9 +5,9 @@
 ** By Arthur Teisseire
 */
 
-#include "my.h"
+#include <unistd.h>
 
-void my_putchar(char c)
+void my_putchar(char const c)
 {
 	write(1, &c, 1);
 }
