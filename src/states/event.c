@@ -16,6 +16,8 @@ static void check_key(screen_t *sc)
 	}
 	else if (sc->event.key.code == sfKeyRight)
 		sc->id_anim = (sc->id_anim + 1) % MAX_ID;
+	if (sc->id_anim == 5)
+		clear(sc->buffer);
 }
 
 void event(screen_t *sc)

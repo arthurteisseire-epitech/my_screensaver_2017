@@ -17,12 +17,12 @@ SRC     =	$(DSRC)main.c \
 		$(STATES)update.c \
 		$(STATES)draw.c \
 		$(STATES)destroy.c \
-		$(ANIMS)anim1.c \
-		$(ANIMS)anim2.c \
-		$(ANIMS)anim3.c \
-		$(ANIMS)anim4.c \
-		$(ANIMS)anim5.c \
-		$(ANIMS)anim6.c \
+		$(ANIMS)anim_noise.c \
+		$(ANIMS)anim_impress_3d.c \
+		$(ANIMS)anim_moving_squares.c \
+		$(ANIMS)anim_teddy_raise.c \
+		$(ANIMS)anim_teddy_disapear.c \
+		$(ANIMS)anim_teddy_colors.c \
 		$(INIT)init_screen.c \
 		$(TOOLS)pixel.c \
 		$(TOOLS)shapes.c \

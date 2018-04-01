@@ -1,7 +1,7 @@
 /*
 ** EPITECH PROJECT, 2017
 ** File Name : map.c
-** File dectription:
+** File description:
 ** By Arthur Teisseire
 */
 

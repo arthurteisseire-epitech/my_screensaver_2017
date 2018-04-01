@@ -19,16 +19,11 @@ static void shade_it(framebuffer_t *buffer)
 
 void anim6(screen_t *sc)
 {
-	static int not_clear = 1;
 	int size = 300;
 	int speed = 25;
 	int x = WIDTH / 2;
 	int y;
 
-	if (not_clear) {
-		clear(sc->buffer);
-		not_clear = 0;
-	}
 	if (size >= -60) {
 		size -= sc->sec * speed;
 		y = HEIGHT / 2 + size / 2;
